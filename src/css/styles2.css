@@ -21,7 +21,6 @@ body {
 .container,
 .footer-content {
     margin: 0 auto;
-    padding: 20px;
 }
 
 .container {
@@ -31,7 +30,7 @@ body {
 
 .footer {
     background-color: #75542D;
-    padding: 20px;
+    padding: 20px 0;
 }
 
 /**** GENERAL ****/
@@ -52,7 +51,7 @@ body {
     .nav-content,
     .container,
     .footer-content {
-        max-width: 60%;
+        max-width: 70%;
         margin: 0 auto;
     }
 
@@ -73,14 +72,36 @@ body {
     }
 
     .logo img {
-        width: 100px;
-        height: 100px;
+        width: 150px;
+        height: 150px;
+        filter: brightness(100%) invert(1);
     }
 
     .nav-menu {
         grid-area: nav;
         display: inline-flex;
         list-style: none;
+        align-self: center;
+        justify-self: end;
+    }
+
+    .nav-menu li {
+        margin: 0 10px;
+        text-transform: uppercase;
+    }
+
+    .nav-menu a {
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+
+    .nav-menu a:hover {
+        margin-bottom: 10px;
+    }
+
+    .nav-menu li:hover {
+        color: #FFFFFF;
+        text-decoration: underline;
     }
 
     /**** HEADER ****/
@@ -100,7 +121,13 @@ body {
         row-gap: 50px;
         grid-template-areas: 
         "copyright hueco menu"
-        "rrss legal menu";
+        "rrss legal legal";
+    }
+
+    .footer-content a,
+    .footer-content p {
+        color: #FFFFFF;
+        text-decoration: none;
     }
 
     .copyright {
@@ -108,33 +135,59 @@ body {
     }
     
     .copyright img {
-        width: 100px;
-        height: 100px;
+        width: 150px;
+        height: 150px;
+        filter: brightness(100%) invert(1);
     }
 
     .rrss {
         grid-area: rrss;
+    }
+
+    .rrss ul {
         display: inline-flex;
         list-style: none;
+    }
+
+    .rrss ul li {
+        margin: 0 10px;
     }
 
     .menu {
         grid-area: menu;
     }
 
+    .menu p {
+        text-transform: uppercase;
+    }
+
     .menu ul {
         list-style: none;
     }
 
+    .menu ul li {
+        margin: 10px 0;
+        text-transform: uppercase;
+    }
+
     .legal {
         grid-area: legal;
+        align-self: end;
     }
 
     .legal ul {
         display: inline-flex;
         list-style: none;
         font-size: 10pt;
-        justify-self: end;
+    }
+
+    .legal ul li {
+        margin: 0 10px;
+        text-transform: uppercase;
+    }
+
+    .menu p {
+        text-transform: uppercase;
     }
 
     /**** FOOTER ****/
